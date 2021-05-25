@@ -9,7 +9,7 @@ const FormComponent = (props) => {
   const addUserHandler = (e) => {
     e.preventDefault();
     if (username.trim().length !== 0 && +age > 0) {
-      console.log(username, age);
+      props.onAddUser(username, age);
       setUsername("");
       setAge("");
     } else {
