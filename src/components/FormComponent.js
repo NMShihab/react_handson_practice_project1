@@ -34,7 +34,7 @@ const FormComponent = (props) => {
   const ageChangeHandler = (e) => setAge(e.target.value);
   const errorHandler = () => setError(null);
   return (
-    <div>
+    <React.Fragment>
       {error && (
         <ErrorModal
           title={error.title}
@@ -62,7 +62,7 @@ const FormComponent = (props) => {
           <Button type="submit">Add user</Button>
         </form>
       </Card>
-    </div>
+    </React.Fragment>
   );
 };
 
